@@ -13,6 +13,14 @@ r.connect(rConfig, function(connErr, conn){
 	console.log('Connected.');
 	async.series([
 		function(cb){
+			console.log('Creating heros table');
+			r.tableCreate('heroes').run(conn, cb);
+		},
+		function(cb){
+			console.log('Creating villans table');
+			r.tableCreate('villans').run(conn, cb);
+		},
+		function(cb){
 			console.log('Inserting into heroes table.');
 			r.table('heroes').insert(heroes).run(conn, cb);
 		}, function(cb){
@@ -24,5 +32,6 @@ r.connect(rConfig, function(connErr, conn){
 			throw new Error(err);
 		}
 		console.log('Insert Results', data);
+		conn.close();
 	});
 });
