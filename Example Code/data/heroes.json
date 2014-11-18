@@ -1,0 +1,105 @@
+[
+    {
+        "id": "Batman",
+        "alterEgo": "Bruce Wayne",
+        "gender": "male",
+        "status": "alive",
+        "type": "hero",
+        "home": "Gotham",
+        "sidekicks": [
+            "Robin",
+            "Batgirl"
+        ],
+        "nemesis": "Joker",
+        "powers": [
+            "gadgets",
+            "detective skills",
+            "science",
+            "technology"
+        ],
+        "tags": [
+            "vigilante",
+            "dark knight",
+            "vengance",
+            "night",
+            "the goddamn batman"
+        ]
+    },
+    {
+        "id": "Robin",
+        "alterEgo": "Jason Todd",
+        "gender": "male",
+        "status": "dead",
+        "type": "sidekick",
+        "home": "Gotham",
+        "powers": [
+            "gadgets"
+        ],
+        "tags": [
+            "vigilante",
+            "boy wonder"
+        ]
+    },
+    {
+        "id": "Batgirl",
+        "alterEgo": "Barbara Gordon",
+        "gender": "female",
+        "status": "alive",
+        "type": "sidekick",
+        "home": "Gotham",
+        "powers": [
+            "gadgets"
+        ],
+        "tags": [
+            "vigilante"
+        ]
+    },
+    {
+        "id": "Superman",
+        "alterEgo": "Clark Kent",
+        "gender": "male",
+        "status": "alive",
+        "type": "hero",
+        "home": "Metropolis",
+        "sidekicks": [
+            "Supergirl"
+        ],
+        "nemesis": "Doomsday",
+        "powers": [
+            "Invulnerability",
+            "Flight",
+            "Superhuman Strength",
+            "Superhuman Speed",
+            "Superhuman Hearing",
+            "Superhuman Olfaction",
+            "X-Ray Vision",
+            "Heat Vision"
+        ],
+        "tags": [
+            "Krypton",
+            "Orfan",
+            "OP"
+        ]
+    },
+    {
+        "id": "Supergirl",
+        "alterEgo": "Clark Kent",
+        "gender": "female",
+        "status": "alive",
+        "type": "sidekick",
+        "home": "Metropolis",
+        "powers": [
+            "Invulnerability",
+            "Flight",
+            "Superhuman Strength",
+            "Superhuman Speed",
+            "Superhuman Hearing",
+            "Superhuman Olfaction",
+            "X-Ray Vision",
+            "Heat Vision"
+        ],
+        "tags": [
+            "Krypton"
+        ]
+    }
+]

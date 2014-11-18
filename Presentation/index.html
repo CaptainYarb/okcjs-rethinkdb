@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=792, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link href='http://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="shower/themes/bright/styles/screen.css">
+	<link rel="stylesheet" href="highlight/styles/default.css">
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body class="list">
+	<header class="caption">
+		<h1>RethinkDB</h1>
+		<p>by Jonathan Yarbor</p>
+	</header>
+	<section class="slide" id="Cover"><div>
+		<h2>RethinkDB</h2>
+		<p>Yes… It’s another NoSQL database. Obligatory XKCD.</p>
+		<div class="xkcd">
+			<img src="pictures/xkcd-927-standards.png">
+		</div>
+		<!--
+			To apply styles to the certain slides
+			set slide ID to get needed elements
+			-->
+	</div></section>
+	<section class="slide cover"><div>
+		<h2 class="console">#: whoami</h2>
+			<div class="whoami">
+				<strong>Jonathan Yarbor</strong>
+				<span>Lead Developer at <a href="https://nodecraft.com?ref=okcjs-rethinkdb" target="_blank">NodeCraft</a></span>
+				<br/>
+				<a href="http://gibhub.com/blazedd" target="_blank">gibhub.com/blazedd</a>
+				<a href="http://twitter.com/blazedd" target="_blank">@blazedd</a>
+				<a href="http://blazedd.com/" target="_blank">blazedd.com</a>
+				<img src="pictures/me.png">
+			</div>
+	</div></section>
+	<section class="slide"><div>
+		<h2>Prerequisites</h2>
+			<ol>
+				<li>Basic Understanding of Node.js</li>
+				<li>MongoDB, MySQL, or PostgreSQL might be helpful
+				<li>Willingness to use <a href="https://github.com/rethinkdb/rethinkdb" target="_blank">Github</a> and/or IRC (#rethinkdb on Freenode) to report bugs and get help.
+				<li class="next">Appreciation for nerdy/super hero comic references in <a href="http://rethinkdb.com/docs/" target="_blank">API docs</a>.
+			</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2>What is RethinkDB?</h2>
+			<ol>
+				<li>NoSQL database to store JSON documents.</li>
+				<li class="next">Chainable queries written at the programming level &amp; executed serverside. No more query syntax to remember!</li>
+				<li class="next">Fully featured queries supporting <strong>joins</strong>, map/reduce, &amp; cursors</li>
+				<li class="next">Simplified sharding and replication with multiple servers</li>
+				<li class="next">Includes sexy web interface out of the box</li>
+				<li class="next">Fairly new to the block. Check the <a href="http://rethinkdb.com/stability/" target="_blank">Stability Report</a>.</li>
+			</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2 class="halfline">Writing Queries</h2>
+		<p class="">Queries are just more Javascript</p>
+		<pre><code class="javascript">r.table('heros').get('superman')</code></pre>
+		<div class="next">
+			<pre><code class="javascript">r.table('heros').get('superman')
+	.update({status: 'mostly-dead'})</code></pre>
+		</div>
+	</div></section>
+	<section class="slide cover"><div>
+		<h2>Lets get our hands dirty!</h2>
+		<img src="pictures/dirtyhands.png" />
+	</div></section>
+	<section class="slide"><div>
+		<h2 class="halfline">Performance</h2>
+		<ul>
+			<li>Sorry, I don't have any exact numbers. This isn't my forte!</li>
+			<li class="next">RethinkDB does provide several methods to keep apps performant:
+				<ol>
+					<li class="next">Secondary Indexing</li>
+					<li class="next">Query profiler</li>
+					<li class="next">Write settings on instance config</li>
+					<li class="next">Write durability at query</li>
+					<li class="next">No-reply at query</li>
+				</ol>
+			</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2 class="halfline">Security</h2>
+		<p class="halfline">Read the <a href="http://www.rethinkdb.com/docs/security/" target="_blank">docs article</a> regarding security. TLDR:</p>
+		<ol>
+			<li>
+				RethinkDB Admin Web Panel
+				<ul>
+					<li>Simple Reverse proxy + basic auth</li>
+				</ul>
+			</li>
+			<li class="next">
+				Driver Port - what your program connects to
+				<ul>
+					<li>Secure connection with `auth` password</li>
+					<li>IPtables / firewall</li>
+				</ul>
+			</li>
+			<li class="next">
+				Cluster Port - how your clusters communicate
+				<ul>
+					<li>IPtables / firewall</li>
+				</ul>
+			</li>
+		</ol>
+	</div></section>
+	<section class="slide"><div>
+		<h2 class="halfline">Features I didn't cover:</h2>
+		<ul>
+			<li>Native time/date formatting with timezone support</li>
+			<li class="next">Geolocation storage/query with GeoJSON support</li>
+			<li class="next">Binary data storage</li>
+			<li class="next">API Consumption for Data import via http</li>
+			<li class="next">Map/Reduce &amp; Query cursor</li>
+			<li class="next">Streaming &amp; Event System</li>
+		</ul>
+	</div></section>
+	<section class="slide"><div>
+		<h2>That's all, folks!</h2>
+		<p>Learn more about RethinkDB at <a href="http://" target="_blank">RethinkDB.net</a></p>
+		<p>Ask a question and get a shirt or sticker.</p>
+	</div></section>
+	<!--
+		To hide progress bar from entire presentation
+		just remove “progress” element.
+		-->
+	<div class="progress"><div></div></div>
+	<script src="shower/shower.min.js"></script>
+	<script src="highlight/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	<!-- Copyright © 2014 Yours Truly, Famous Inc. -->
+	<!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

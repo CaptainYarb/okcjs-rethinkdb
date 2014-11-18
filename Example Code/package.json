@@ -1,0 +1,20 @@
+{
+  "name": "okcjs-rethinkdb",
+  "version": "0.0.1",
+  "description": "Demonstration of RethinkDB using super hero references",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rethinkdb",
+    "okc",
+    "superheros"
+  ],
+  "author": "Jonathan Yarbor",
+  "license": "MIT",
+  "dependencies": {
+    "rethinkdb": "~1.15.0-0",
+    "async": "~0.9.0"
+  }
+}

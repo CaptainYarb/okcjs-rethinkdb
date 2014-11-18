@@ -1,0 +1,36 @@
+[
+    {
+        "id": "Joker",
+        "alterEgo": null,
+        "gender": "male",
+        "status": "alive",
+        "type": "villan",
+        "home": "Gotham",
+        "nemesis": "Batman",
+        "powers": [
+            "psychopath"
+        ],
+        "tags": [
+            "sociopath",
+            "clown",
+            "arkham asylum"
+        ]
+    },
+    {
+        "id": "Doomsday",
+        "gender": "male",
+        "status": "alive",
+        "type": "villan",
+        "home": "Metropolis",
+        "nemesis": "Superman",
+        "powers": [
+            "Resistance",
+            "Healing",
+            "Strength"
+        ],
+        "tags": [
+            "Krypton",
+            "Ultimate Killing Machine"
+        ]
+    }
+]
