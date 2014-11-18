@@ -4,14 +4,14 @@ var r = require('rethinkdb'),
 // Our Search Perameters
 var search = {
 	id:'Bat',
-	gender:'male'
+	gender:'female'
 };
 
 r.connect(rConfig, function(connErr, conn){
 	if(connErr){
 		throw new Error(connErr);
 	}
-	r.table("heros").filter(function(hero){
+	r.table("heroes").filter(function(hero){
 		return r.expr(search).keys().map(function(key){
 			return hero(key).match(r.expr("(?i)").add(r.expr(search)(key))).ne(null)
 		}).reduce(function(left, right){
